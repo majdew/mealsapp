@@ -19,11 +19,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
 
   var _loadedInitialData = false;
 
-  void _removeMeal(String mealId) {
-    setState(() {
-      displayedMeals.removeWhere((meal) => meal.id == mealId);
-    });
-  }
 
   @override
   void didChangeDependencies() {
@@ -56,7 +51,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
             affordability: displayedMeals[index].affordability,
             complexity: displayedMeals[index].complexity,
             imageURL: displayedMeals[index].imageUrl,
-            removeItem: _removeMeal,
           );
         },
         itemCount: displayedMeals.length,

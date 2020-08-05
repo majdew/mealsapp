@@ -8,10 +8,7 @@ class FiltersScreen extends StatefulWidget {
   final Function saveFilters;
   final Map<String, bool> currentFilters;
 
-  FiltersScreen(this.currentFilters, this.saveFilters) {
-    print(this.currentFilters);
-    print("error");
-  }
+  FiltersScreen(this.currentFilters, this.saveFilters);
 
   @override
   _FiltersScreenState createState() => _FiltersScreenState();
@@ -44,10 +41,6 @@ class _FiltersScreenState extends State<FiltersScreen> {
     _vegan = widget.currentFilters['vegan'];
     _vegetarian = widget.currentFilters['vegetarian'];
 
-    print(_gultenFree);
-    print(_lactoseFree);
-    print(_vegan);
-    print(_vegetarian);
     super.initState();
   }
 
