@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './category_item.dart';
-import './dummy_data.dart';
+import '../widgets/category_item.dart';
+import '../dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
   @override
@@ -10,7 +10,9 @@ class CategoriesScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "DeliMeal",
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.headline6.copyWith(
+                color: Colors.white,
+              ),
         ),
       ),
       body: GridView(
@@ -22,6 +24,7 @@ class CategoriesScreen extends StatelessWidget {
             mainAxisSpacing: 20),
         children: DUMMY_CATEGORIES.map((category) {
           return CategoryItem(
+            category.id,
             category.title,
             category.color,
           );
