@@ -11,7 +11,10 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, Object>> _pages = [
-    {"title": "Categories", "page": CategoriesScreen()},
+    {
+      "title": "Categories",
+      "page": CategoriesScreen(),
+    },
     {
       "title": "Your Favorite",
       "page": FavoritesScreen(),
@@ -31,9 +34,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectePageIndex]["title"]),
       ),
-      drawer:
-        MainDrawer()
-      ,
+      drawer: MainDrawer(),
       body: _pages[_selectePageIndex]["page"],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
